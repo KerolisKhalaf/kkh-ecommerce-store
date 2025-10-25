@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "front/kkh/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/kkh"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/front/kkh/dist/kkh/$1"
+    }
+  ]
+}
