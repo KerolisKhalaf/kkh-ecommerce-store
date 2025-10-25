@@ -1,18 +1,32 @@
 {
-  "name": "node-task",
+  "name": "kkh-ecommerce-backend",
   "version": "1.0.0",
+  "description": "KKH E-Commerce Store Backend API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "node scripts/seedDatabase.js",
+    "reset-db": "node scripts/seedDatabase.js",
+    "setup": "npm install && npm run seed"
   },
-  "author": "keerolis-khalaf",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["ecommerce", "api", "nodejs", "express", "mongodb"],
+  "author": "KKH Store",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "dotenv": "^17.2.0",
-    "express": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.16.3"
+    "mongoose": "^8.0.3",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
